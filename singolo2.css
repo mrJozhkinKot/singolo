@@ -43,26 +43,26 @@ p {
     line-height: 30px;
 }
 
-#portfolio {
+.portfolio {
     background-color: #2d303a;
     color:  #666d89;
     padding-top: 70px;
     padding-bottom: 52px;
 }
 
-#portfolio h2, #about-us h2  {
+.portfolio h2, .about-us h2  {
     letter-spacing: 1px;
     
 }
 
-#portfolio ul {
+.portfolio ul {
 list-style: none;
 display: flex;
 justify-content: left;
 margin-top: 10px;
 }
 
-#portfolio ul li {
+.portfolio ul li {
      justify-content: left;
      padding: 0 7px;
      margin-right: 10px;
@@ -73,11 +73,20 @@ margin-top: 10px;
      border-radius: 5px;
     }
 
-    #portfolio ul li:hover {
+    .portfolio ul li:hover {
          cursor: pointer;
-       }
+         color: #fff;
+    border: 1px solid #fff;
+                     }
 
-       #portfolio .layout-4-col{
+             
+   .portfolio ul li.active-nav {
+    color: #fff;
+    border: 1px solid #fff;
+                }     
+
+
+       .portfolio .layout-4-col{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -88,36 +97,36 @@ margin-top: 10px;
         
         }
         
-       #portfolio .layout-4-col img{
+       .portfolio .layout-4-col img{
          margin-bottom: 20px;
                 }
 
-#about-us {
+.about-us {
     color: #666d89;
     padding-top: 70px;
     padding-bottom: 36px;
 }
 
-#about-us .team {
+.about-us .team {
     display: flex;
     margin-top: 42px;
     justify-content: space-between;
     width: 960px;
 }
 
-#about-us .team .team-person h3 {
+.about-us .team .team-person h3 {
 margin-top: 13px;
 letter-spacing: 0.5px;
 }
 
-#about-us .team .team-person p {
+.about-us .team .team-person p {
     margin-top: 12px;
     font-size: 12px;
     line-height: 22px;
     }
 
      
-    #about-us .team .team-person .social-info img {
+    .about-us .team .team-person .social-info img {
      margin-top: 22px;
      margin-right: 5px;
     }
