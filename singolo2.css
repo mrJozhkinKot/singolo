@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Lato';
+    src: url("assets/fonts/Lato-Regular.ttf");
+    src: url("assets/fonts/Lato-Bold.ttf");
+    src: url("assets/fonts/Lato-Italic.ttf");
+    src: url("assets/fonts/Lato-Thin.ttf");
+    src: url("assets/fonts/Lato-Black.ttf");
+    src: url("assets/fonts/Lato-Light.ttf");
+        }
+
+* {
+    margin:0;
+    padding:0;
+}
+
+  body {
+    font-family: 'Lato', 'sans-serif';
+    }
+
+.wrapper {
+width: 1020px;
+margin: 0 auto;
+padding: 0 40px;
+box-sizing: border-box;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 18px;
+    font-weight: 900;
+    margin-bottom: 28px;
+          }
+
+h3 {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#portfolio {
+    background-color: #2d303a;
+    color:  #666d89;
+    padding-top: 70px;
+    padding-bottom: 52px;
+}
+
+#portfolio h2, #about-us h2  {
+    letter-spacing: 1px;
+    
+}
+
+#portfolio ul {
+list-style: none;
+display: flex;
+justify-content: left;
+margin-top: 10px;
+}
+
+#portfolio ul li {
+     justify-content: left;
+     padding: 0 7px;
+     margin-right: 10px;
+     font-size: 12px;
+     line-height: 18px;
+     font-weight: 400;
+     border: 1px solid #666d89;
+     border-radius: 5px;
+    }
+
+    #portfolio ul li:hover {
+         cursor: pointer;
+       }
+
+       #portfolio .layout-4-col{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        box-sizing: border-box;
+        width: 940px;
+       
+        
+        }
+        
+       #portfolio .layout-4-col img{
+         margin-bottom: 20px;
+                }
+
+#about-us {
+    color: #666d89;
+    padding-top: 70px;
+    padding-bottom: 36px;
+}
+
+#about-us .team {
+    display: flex;
+    margin-top: 42px;
+    justify-content: space-between;
+    width: 960px;
+}
+
+#about-us .team .team-person h3 {
+margin-top: 13px;
+letter-spacing: 0.5px;
+}
+
+#about-us .team .team-person p {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 22px;
+    }
+
+     
+    #about-us .team .team-person .social-info img {
+     margin-top: 22px;
+     margin-right: 5px;
+    }
+    
+    
