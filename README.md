@@ -1,2 +1,2 @@
 SINGOLO
-https://mrJozhkinKot.github.io/singolo/index.html
+https://mrJozhkinKot.github.io/singolo/ 
