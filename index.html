@@ -14,30 +14,42 @@
             <h1 class="logo">singolo<span class="main-color">*</span></h1>
             <nav class="navbar">
                 <ul>
-                    <li class="active">home</li>
-                    <li>services</li>
-                    <li>portfolio</li>
-                    <li>about</li>
-                    <li>contact</li>
+                    <li><a class="active" href="#home">home</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#portfolio">portfolio</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="promo">
+        <section id='home' class="promo">
             <div class="wrapper">
-
-                <img class="vertical-phone" src="assets/images/iPhone Vertical.png">
-                <img class="horizontal-phone" src="assets/images/iPhone Horizontal.png">
-                <img class="chev-left" src="assets/images/chev.png">
-                <img class="chev-right" src="assets/images/chev.png">
+                 <div class="vertical-phone-screen">
+                    <img class="vertical-phone" src="assets/images/iPhone Vertical.png" alt="vertical_phone">
+                    <div class="vertical-phone-off hidden"></div>
+                 </div>
+                 <div class="horizonal-phone-screen">
+                    <img class="horizontal-phone" src="assets/images/iPhone Horizontal.png" alt="horizontal_phone">
+                    <div class="horizontal-phone-off hidden"></div>
+                 </div>
+               
+                <img class="chev-left" src="assets/images/chev.png" alt="left_chev">
+                <img class="chev-right" src="assets/images/chev.png" alt="right_chev">
+                <div class="second-slide hidden">
+                    <img src="assets/images/Slide-2.png" alt="">
+                </div>
+            
+               
+                <div></div>
             </div>
 
             </div>
         </section>
 
-        <section class="services">
+        <section id="services" class="services">
             <div class="wrapper">
                 <div>
                     <h2>Our Services</h2>
@@ -107,36 +119,36 @@
             </div>
 
         </section>
-
-        <section class="portfolio">
+         
+        <section id="portfolio" class="portfolio">
             <div class="wrapper">
 
                 <h2>Portfolio</h2>
                 <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-                <ul>
-                    <li class="active-nav">All</li>
-                    <li>Web Design</li>
-                    <li>Graphic Design</li>
-                    <li>Artwork</li>
+                <ul class="portfolio-nav">
+                    <li class="portf-nav active-nav">All</li>
+                    <li class="portf-nav">Web Design</li>
+                    <li class="portf-nav">Graphic Design</li>
+                    <li class="portf-nav">Artwork</li>
                 </ul>
-                <div class="layout-4-col">
-                    <img src="assets/images/img1.png" alt="image">
-                    <img src="assets/images/img2.png" alt="image">
-                    <img src="assets/images/img3.png" alt="image">
-                    <img src="assets/images/img4.png" alt="image">
-                    <img src="assets/images/img5.png" alt="image">
-                    <img src="assets/images/img6.png" alt="image">
-                    <img src="assets/images/img7.png" alt="image">
-                    <img src="assets/images/img8.png" alt="image">
-                    <img src="assets/images/img9.png" alt="image">
-                    <img src="assets/images/img10.png" alt="image">
-                    <img src="assets/images/img11.png" alt="image">
-                    <img src="assets/images/img12.png" alt="image">
-                </div>
+                <ul class="layout-4-col">
+                    <li class='portf-img'><img src="assets/images/img2.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img1.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img3.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img4.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img5.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img6.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img7.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img8.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img9.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img10.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img11.png" alt="image"></li>
+                    <li class='portf-img'><img src="assets/images/img12.png" alt="image"></li>
+                </ul>
             </div>
         </section>
 
-        <section class="about-us">
+        <section id="about" class="about-us">
             <div class="wrapper">
                 <h2>About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
@@ -186,7 +198,7 @@
             </div>
         </section>
 
-        <section class="quote">
+        <section id="contact" class="quote">
             <div class="wrapper">
                 <h2>Get a Quote</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
@@ -195,10 +207,10 @@
                 </p>
                 <div class="feedback">
                     <form class="message">
-                        <input type="text" placeholder="Name (Required)">
-                        <input type="email" placeholder="Email (Required)">
-                        <input type="text" placeholder="Subject">
-                        <textarea rows="12" placeholder="Describe your project in detail..."></textarea>
+                        <input id="name" type="text" placeholder="Name (Required)" required>
+                        <input id="email" type="email" placeholder="Email (Required)" required>
+                        <input type="text" id="subject" placeholder="Subject" >
+                        <textarea rows="12" id="describtion" placeholder="Describe your project in detail..."></textarea>
                         <input type="submit" value="Submit" class="submit">
                     </form>
 
@@ -215,15 +227,20 @@
                             </div>
                             <div>
                                 <img src="assets/images/cont-phone.png">
-                                <span>03528 331 86 35</span>
+                                <a  href="tel:+035283318635">03528 331 86 35</a>
                             </div>
                             <div>
                                 <img src="assets/images/cont-mail.png">
-                                <span>info@singolo.com</span>
+                                <a href="mailto:info@singolo.com">info@singolo.com</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="modal-feedback hidden">
+             <p><span id="result"></span></p>
+             <input class="btn-ok" type="button" value="OK">
             </div>
 
 
@@ -242,6 +259,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
