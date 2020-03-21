@@ -18,15 +18,19 @@
                     <li><a href="#services">services</a></li>
                     <li><a href="#portfolio">portfolio</a></li>
                     <li><a href="#about">about</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#quote">contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id='home' class="promo">
-            <div class="wrapper">
+      
+        <section class="home">
+            <a  id='home' class = "anchor"></a>
+            <div class="wrapper home-wrapper">
+                <div class="slider-container">
+                <div class = "slide active-slide">
                  <div class="vertical-phone-screen">
                     <img class="vertical-phone" src="assets/images/iPhone Vertical.png" alt="vertical_phone">
                     <div class="vertical-phone-off hidden"></div>
@@ -34,22 +38,24 @@
                  <div class="horizonal-phone-screen">
                     <img class="horizontal-phone" src="assets/images/iPhone Horizontal.png" alt="horizontal_phone">
                     <div class="horizontal-phone-off hidden"></div>
-                 </div>
-               
-                <img class="chev-left" src="assets/images/chev.png" alt="left_chev">
-                <img class="chev-right" src="assets/images/chev.png" alt="right_chev">
-                <div class="second-slide hidden">
+                                   </div>
+                </div>
+                <div class="slide">
                     <img src="assets/images/Slide-2.png" alt="">
                 </div>
+            </div>
             
+                <img class="chev-left" src="assets/images/chev.png" alt="left_chev">
+                <img class="chev-right" src="assets/images/chev.png" alt="right_chev">
                
-                <div></div>
+               
             </div>
 
             </div>
         </section>
 
-        <section id="services" class="services">
+        <section  class="services">
+            <a id="services" class = "anchor"></a>
             <div class="wrapper">
                 <div>
                     <h2>Our Services</h2>
@@ -120,7 +126,8 @@
 
         </section>
          
-        <section id="portfolio" class="portfolio">
+        <section class="portfolio">
+            <a  id='portfolio' class = "anchor"></a>
             <div class="wrapper">
 
                 <h2>Portfolio</h2>
@@ -148,7 +155,8 @@
             </div>
         </section>
 
-        <section id="about" class="about-us">
+        <section  class="about">
+            <a  id="about" class = "anchor"></a>
             <div class="wrapper">
                 <h2>About Us</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
@@ -198,7 +206,8 @@
             </div>
         </section>
 
-        <section id="contact" class="quote">
+        <section class="quote">
+            <a id="quote" class = "anchor"></a>
             <div class="wrapper">
                 <h2>Get a Quote</h2>
                 <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
@@ -210,7 +219,7 @@
                         <input id="name" type="text" placeholder="Name (Required)" required>
                         <input id="email" type="email" placeholder="Email (Required)" required>
                         <input type="text" id="subject" placeholder="Subject" >
-                        <textarea rows="12" id="describtion" placeholder="Describe your project in detail..."></textarea>
+                        <textarea rows="12" id="description" placeholder="Describe your project in detail..."></textarea>
                         <input type="submit" value="Submit" class="submit">
                     </form>
 
@@ -237,11 +246,13 @@
                     </div>
                 </div>
             </div>
-
-            <div class="modal-feedback hidden">
+           <div class="modal  hidden">
+            <div class="modal-feedback">
              <p><span id="result"></span></p>
-             <input class="btn-ok" type="button" value="OK">
+             <br>
+             <button class="btn-ok" type="button" value="OK">OK</button>
             </div>
+        </div>
 
 
 
