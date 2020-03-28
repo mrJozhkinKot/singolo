@@ -11,7 +11,9 @@ window.onload = function() {
     addFeedbackSubmit();
     closeFeedbackSubmit();
     onScroll();
- 
+    addHamburgerClick();
+    closeMenuByLinks();
+  
 }
 const nav = document.querySelector('.navbar');
 const vertPhone = document.querySelector('.vertical-phone-screen');
@@ -25,10 +27,11 @@ const modal =  document.querySelector('.modal');
 const btn =  document.querySelector('.btn-ok');
 const subject = document.querySelector('#subject');
 const description = document.querySelector('#description');
-
-
-
-
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.overlay');
+const logo = document.querySelector('.logo');
+const mobileNav = document.querySelector('.navbar ul');
+const menu = document.querySelector('.menu');
 
 const addNavClickHandler = () => {
     nav.addEventListener('click', (e) => {
@@ -46,18 +49,17 @@ const onScroll = () => {
         document.querySelectorAll('section').forEach((el) => {
         
           if (el.offsetTop <= curPos && (el.offsetTop + el.offsetHeight) > curPos) {
-                  document.querySelectorAll('.navbar a').forEach((a) => {
+                  document.querySelectorAll('.menu a').forEach((a) => {
                   a.classList.remove('active');
                   if(el.getAttribute('class') === a.getAttribute('href').substring(1)) {
                       a.classList.add('active');
                   }
               })
-          }
+                      }
    
       })
     });
 }
-
 
 //phone screen
 const addSwitchVerticalPhone = () => {
@@ -134,10 +136,6 @@ const addSliderRightClickHandler = () => {
     });
 }
 
-
-
-
-
 //portfolio navigation
 const addPortfolioCLickHandler = () => {
     portfolioNav.addEventListener('click', (e) => {
@@ -163,25 +161,33 @@ const addPortfolioShuffle = () => {
 
         pictures.querySelectorAll('img').forEach((el, index) => 
             el.src = random[index]) 
-        }
+
+        pictures.querySelectorAll('img').forEach((el) => 
+        el.classList.remove ('img-border'))
+                          }
+                   
+     
     })
 }
  
 //img border
 
  const addBorderClickHandler = () => {
-    pictures.addEventListener('click', (e) => {
+        pictures.addEventListener('click', (e) => {
+            if (e.target.tagName !== 'IMG') return;
         if (e.target.classList.contains('img-border')) {
             e.target.classList.remove('img-border');
         } else {
-        pictures.querySelectorAll ('img'). forEach (el => {
+                 pictures.querySelectorAll ('img'). forEach (el => {
                 el.classList.remove('img-border');
                 e.target.classList.add ('img-border'); 
-                         })  
-                        } 
-})
- }
-
+                                     })  
+                                             
+}
+        
+ })
+}
+  
 
 const addFeedbackSubmit = () => { 
   
@@ -202,8 +208,6 @@ function GetDescription () {
     return description.value? `\nОписание: ${description.value}`: '\nБез описания';
 }
 
-
-
 const closeFeedbackSubmit = () => {
  btn.addEventListener('click', () =>{
     modal.classList.add ('hidden'); 
@@ -212,4 +216,28 @@ const closeFeedbackSubmit = () => {
  })
 }
 
+const  addHamburgerClick = () => {
+hamburger.addEventListener ('click', () => {
+    mobileMenu.classList.toggle ('overlay-on');
+    nav.classList.toggle ('nav-mobile');
+    mobileNav.classList.toggle ('active-ul');
+    logo.classList.toggle ('logo');
+    logo.classList.toggle ('logo-left');
+    hamburger.classList.toggle ('hamburger-rotate');
+   
+})
+}
+
+const closeMenuByLinks = () => {
+    nav.addEventListener ('click', (e) => {
+ if (e.target.tagName === 'A' ) {
+nav.classList.remove ('nav-mobile');
+mobileNav.classList.remove ('active-ul');
+mobileMenu.classList.remove ('overlay-on');
+logo.classList.add ('logo');
+logo.classList.remove ('logo-left');
+hamburger.classList.toggle ('hamburger-rotate');
+    }
+})
+}
 
