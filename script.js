@@ -13,8 +13,7 @@ window.onload = function() {
     onScroll();
     addHamburgerClick();
     closeMenuByLinks();
-    closeMenuByBlur();
- 
+  
 }
 const nav = document.querySelector('.navbar');
 const vertPhone = document.querySelector('.vertical-phone-screen');
@@ -242,8 +241,3 @@ hamburger.classList.toggle ('hamburger-rotate');
 })
 }
 
-const closeMenuByBlur = () => {
-    nav.addEventListener ('blur', () => {
-        alert ('1')
-}, true)
-}
